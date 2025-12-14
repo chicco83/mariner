@@ -15,18 +15,13 @@ Installing package
 ------------------
 
 First, enable the repository:
-
-.. code-block:: bash
-
-   $ curl -sL gpg.l9o.dev | sudo apt-key add -
-   $ echo "deb https://ppa.l9o.dev/raspbian ./" | sudo tee /etc/apt/sources.list.d/l9o.list
-   $ sudo apt update
-
 Then install mariner:
 
 .. code-block:: bash
 
-   $ sudo apt install mariner3d
+echo "deb https://ppa.l9o.dev/raspbian ./" | sudo tee /etc/apt/sources.list.d/l9o.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF6F8043AC280E02
+sudo apt update && sudo apt install -y mariner3d
 
 USB Gadget Setup
 ----------------
